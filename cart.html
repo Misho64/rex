@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-size: 16px;
+            font-family: 'Work Sans', sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            box-sizing: border-box; /* Include padding and border in the box model */
+        }
+
+        #header {
+            font-size: 1.2em;
+            padding: 20px; /* Add padding for better spacing */
+            background-color: #f8f8f8; /* Add a light background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        #header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #header img {
+            max-width: 100%; /* Make sure the logo doesn't exceed its container */
+        }
+
+        #cart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #f8f8f8; /* Add a light background color */
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        #cart h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #cart-items {
+            font-size: 1.2em;
+        }
+
+        .cart-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%; /* Ensure items take full width */
+            background-color: white; /* White background for each item */
+            padding: 15px; /* Padding for better styling */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+            border-radius: 8px; /* Add border radius for rounded corners */
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            object-fit: cover; /* Maintain aspect ratio while covering the container */
+            border-radius: 8px; /* Add border radius for rounded corners */
+        }
+
+        .cart-item-details {
+            flex: 1; /* Take remaining space in the flex container */
+            text-align: left;
+        }
+
+        .cart-item-details h3 {
+            margin-bottom: 5px;
+        }
+
+        #total-price {
+            margin-top: 20px;
+            font-size: 2em; /* Increase font size for the total price */
+        }
+
+        #checkout-button,
+        #continue-shopping-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #a75ce9;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-top">
+        <ul>
+            <li><a href="backend/index.php">Blog</a></li>
+            <li><a href="#">Order Information</a></li>
+            <li><a href="#">Buy PC</a></li>
+        </ul>
+
+        <ul>
+            <a href="#">السعوديه - KSA SAR</a>
+        </ul>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </header>
+    
+    <!--end-->
+
+    <!--old header single-->
+      <section id = "header">
+        <a href="#"><img src="imgs/compurex.png" class="logo" alt=""></a>
+        <div class="nav-bar">
+            <ul id="navbar">
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="gamingpcs.html">Gaming PCs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="accesories.html">Accesories</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-2x" style="color: #664AFF;"></i></a></li>
+                <li><a href="SignIn_Page.html"><i class="fa-solid fa-user fa-2x" style="color: #664AFF;"></i></a></li>
+                <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #664AFF;"></i>
+            </ul>
+        </div>
+    </section>
+    
+    
+    <style>
+        .navbar-nav .nav-link {
+            margin-right: 15px; /* Adjust this value as needed */
+            
+        }
+    </style>
+
+    <section id="cart" class="section-p1">
+        <h1>Your Shopping Cart</h1>
+        <div id="cart-items"></div>
+        <div id="total-price">Total: $0.00</div>
+        <a href="checkout.html" id="checkout-button">Checkout</a>
+        <a href="#" id="continue-shopping-button">Continue Shopping</a>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Email:</strong> Compurex@gmail.com</p>
+            <p><strong>Phone:</strong> +966 5676556953</p>
+            <div class="socials">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-instagram" style="color: #664AFF;"></i></a>
+                    <a href="#"><i class="fab fa-twitter" style="color: #664AFF;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="index.html">Home</a>
+            <a href="#">Policies & Terms</a>
+        </div>
+        
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="SignIn_Page.html">Sign-up</a>
+            <a href="#">My Cart</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>Categories</h4>
+            <a href="gamingpcs.html">Gaming PCs</a>
+            <a href="components.html">PC Components</a>
+            <a href="accesories.html">Accesories</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p style="display: flex; justify-content: center; align-items: center;">This Website Established at © 2023</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            displayCartItems();
+
+            const continueShoppingButton = document.getElementById('continue-shopping-button');
+            continueShoppingButton.href = document.referrer;
+
+            function displayCartItems() {
+                const cartItemsContainer = document.getElementById('cart-items');
+                const totalPriceContainer = document.getElementById('total-price');
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                cartItemsContainer.innerHTML = '';
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                    totalPriceContainer.textContent = 'Total: $0.00';
+                    return;
+                }
+
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    const cartItemDiv = document.createElement('div');
+                    cartItemDiv.classList.add('cart-item');
+
+                    const img = document.createElement('img');
+                    img.src = item.imgSrc;
+                    img.alt = item.name;
+
+                    const itemDetailsDiv = document.createElement('div');
+                    itemDetailsDiv.classList.add('cart-item-details');
+
+                    const itemName = document.createElement('h3');
+                    itemName.textContent = item.name;
+
+                    const itemPrice = document.createElement('p');
+                    itemPrice.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
+
+                    total += item.price * item.quantity;
+
+                    const quantityLabel = document.createElement('label');
+                    quantityLabel.textContent = 'Quantity:';
+                    const quantitySelect = document.createElement('select');
+                    for (let i = 1; i <= 10; i++) {
+                        const option = document.createElement('option');
+                        option.value = i;
+                        option.textContent = i;
+                        if (i === item.quantity) {
+                            option.selected = true;
+                        }
+                        quantitySelect.appendChild(option);
+                    }
+                    quantitySelect.addEventListener('change', () => updateQuantity(item, quantitySelect.value));
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = 'Remove';
+                    removeButton.addEventListener('click', () => removeItem(index));
+
+                    itemDetailsDiv.appendChild(itemName);
+                    itemDetailsDiv.appendChild(itemPrice);
+
+                    cartItemDiv.appendChild(img);
+                    cartItemDiv.appendChild(itemDetailsDiv);
+                    cartItemDiv.appendChild(quantityLabel);
+                    cartItemDiv.appendChild(quantitySelect);
+                    cartItemDiv.appendChild(removeButton);
+
+                    cartItemsContainer.appendChild(cartItemDiv);
+                });
+
+                totalPriceContainer.textContent = `Total: $${total.toFixed(2)}`;
+            }
+
+            function updateQuantity(item, newQuantity) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const updatedCart = cart.map((cartItem) => {
+                    if (cartItem.name === item.name) {
+                        cartItem.quantity = parseInt(newQuantity);
+                    }
+                    return cartItem;
+                });
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                displayCartItems();
+            }
+
+            function removeItem(index) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCartItems();
+            }
+        });
+    </script>
+
+</body>
+</html>

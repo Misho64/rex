@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Ecommerce website - shopping</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/glider.min.css">
+        <link rel="stylesheet" href="css/glider.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+<body>
+  <header class="header-top">
+    <ul>
+        <li><a href="backend/index.php">Blog</a></li>
+        <li><a href="#">Order Information</a></li>
+        <li><a href="#">Buy PC</a></li>
+    </ul>
+
+    <ul>
+        <a href="#">السعوديه - KSA SAR</a>
+    </ul>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</header>
+
+<!--end-->
+
+<!--old header single-->
+  <section id = "header">
+    <a href="#"><img src="imgs/compurex.png" class="logo" alt=""></a>
+    <div class="nav-bar">
+        <ul id="navbar">
+            <li><a href="index.html"><span>Home</span></a></li>
+            <li><a href="gamingpcs.html">Gaming PCs</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="accesories.html">Accesories</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-2x" style="color: #664AFF;"></i></a></li>
+            <li><a href="SignIn_Page.html"><i class="fa-solid fa-user fa-2x" style="color: #664AFF;"></i></a></li>
+            <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #664AFF;"></i>
+        </ul>
+    </div>
+</section>
+
+<section class="Title-sec">
+    <h2 class="txt-sec">Gaming PCS</h2>
+  </section>
+
+    <div id="carouselExampleControls" class="carousel slide wide" data-bs-ride="carousel">
+        <div class="carousel-inner" style="border-radius: 20px;">
+          <div class="carousel-item active">
+            <img src="imgs/banner-item--2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/banner-item--2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/banner-item--3.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <section class="Recommendation">
+        <div class="hiraric-list">
+        <a href="index.html" class="gm-tx2">Home</a> / <a href="gamingpcs.html" class="gm-tx">Gaming PCs</a>
+    </div>
+        <div class="recommended-flex">
+            <button class="rec-btn">All Products</button>
+            <button class="rec-btn">Asus</bu tton>
+            <button class="rec-btn">Gigabyte</button>
+            <button class="rec-btn">MSI</button>
+        </div>
+    </section>
+
+<section class="pr-side-bar">
+    <h2>Price Range</h2>
+    <p>Adjust the price range:</p>
+    <div class="range">
+        <div class="sliderValue">
+          <span>100</span>
+        </div>
+<div class="field">
+          <div class="value left">
+0</div>
+<input class="input-value" type="range" min="10" max="7500" value="100" steps="1">
+          <div class="value right">
+7500</div>
+</div>
+</div>
+    <div class="price-input-2">
+        <div class="field-2">
+            <span>Min</span>
+            <input type="number" id="min-price" value="2500">
+        </div>
+        <div class="field-3">
+            <span>Max</span>
+            <input type="number" id="max-price" value="2500">
+        </div>
+        <div class="slider-pr-wrp">
+            <div id="price-slider"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const slideValue = document.querySelector("span");
+    const inputSlider = document.querySelector("input");
+    inputSlider.oninput = (()=>{
+      let value = inputSlider.value;
+      slideValue.textContent = value;
+      slideValue.style.left = (value/2) + "%";
+      slideValue.classList.add("show");
+    });
+    inputSlider.onblur = (()=>{
+      slideValue.classList.remove("show");
+    });
+  </script>
+    
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+          
+                <div class="pro">
+                  <a href="gproduct.html"><img src="imgs/pc1.png" alt="pc1"></a>
+                  <div class="des">
+                <span>TMD shark Gaming PC Intel Core i5-12400F</span>
+                <h5>GAMING PC</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>SAR4500</h4>
+            </div>
+    </div>
+    
+    <div class="pro">
+        <a href="gproduct2.html"><img src="imgs/pc2.png" alt="pc1"></a>
+        <div class="des">
+        <span>Lotchi Risin Processor Computer | Most Economical</span>
+        <h5>GAMING PC</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>SAR7500</h4>
+    </div>
+    </div>
+    
+    <div class="pro">
+        <a href="gproduct3.html"><img src="imgs/pc3.png" alt="pc1"></a>
+    <div class="des">
+    <span>ZORD BLAZE ESSENTIAL GAMING COMPUTER</span>
+    <h5>GAMING PC</h5>
+    <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <h4>SAR6300</h4>
+    </div>
+    </div>
+    
+    <div class="pro">
+        <a href="gproduct4.html"><img src="imgs/pc4.png" alt="pc1"></a>
+    <div class="des">
+    <span>INFINIARC GAMING PC Intel CPU Desktop Core</span>
+    <h5>GAMING PC</h5>
+    <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <h4>SAR5000</h4>
+    </div>
+    </div>
+
+    <div class="pro">
+        <a href="gproduct5.html"><img src="imgs/pc5.png" alt="pc1"></a>
+        <div class="des">
+        <span>Gaming PC Computer Intel i5 10400F Processor</span>
+        <h5>GAMING PC</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>SAR2500</h4>
+        </div>
+        </div>
+
+        <div class="pro">
+            <a href="gproduct6.html"><img src="imgs/pc6.png" alt="pc1"></a>
+            <div class="des">
+            <span>ZORD BLAZE ESSENTIAL GAMING COMPUTER</span>
+            <h5>GAMING PC</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>SAR3000</h4>
+            </div>
+            </div>
+
+            <div class="pro">
+                <a href="gproduct7.html"><img src="imgs/pc7.png" alt="pc1"></a>
+                <div class="des">
+                <span>ROG GAMING DESKTOP G15CE-1170KF097T RGB</span>
+                <h5>GAMING PC</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>SAR4000</h4>
+                </div>
+                </div>
+
+                <div class="pro">
+                    <a href="gproduct8.html"><img src="imgs/pc8.png" alt="pc1"></a>
+                    <div class="des">
+                    <span>ZORD GENESIS VALUED GAMING COMPUTER</span>
+                    <h5>GAMING PC</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>SAR2000</h4>
+                    </div>
+                    </div>
+
+
+    </div>
+    </section>
+
+    <section id="pagi" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Email:</strong> Compurex@gmail.com</p>
+            <p><strong>Phone:</strong> +966 5676556953</p>
+            <div class="socials">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-instagram" style="color: #664AFF;"></i></a>
+                    <a href="#"><i class="fab fa-twitter" style="color: #664AFF;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="index.html">Home</a>
+            <a href="#">Policies & Terms</a>
+        </div>
+        
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="SignIn_Page.html">Sign-up</a>
+            <a href="#">My Cart</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>Categories</h4>
+            <a href="gamingpcs.html">Gaming PCs</a>
+            <a href="components.html">PC Components</a>
+            <a href="accesories.html">Accesories</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p style="display: flex; justify-content: center; align-items: center;">This Website Established at © 2023</p>
+    </div>
+
+</body>
+</html>
