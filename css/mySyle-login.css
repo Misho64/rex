@@ -1,0 +1,136 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235,235,235);
+    background: linear-gradient(56deg, rgba(235,235,235,1) 0%, rgba(245,245,245,1) 77%);
+}
+
+.log-container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.log-container .forms {
+    padding: 30px;
+}
+
+.log-container .forms .title {
+    font-size: 27px;
+    position: relative;
+    font-weight: 600;
+}
+
+
+.forms .input-field {
+    margin-top: 30px;
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: blueviolet;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    left: 320px;
+}
+
+.forms .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: blueviolet;
+}
+
+.forms .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.forms a.text{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.forms a:hover {
+    color: blueviolet;
+
+    text-decoration: underline;
+}
+
+.forms .button{
+    margin-top: 35px;
+}
+
+.forms .button input{
+border: none;
+color: #fff;
+letter-spacing: 1px;
+background-color: blueviolet;
+border-radius: 6px;
+font-weight: 700;
+font-size: 22px;
+cursor: pointer;
+}
+
+.button input:hover {
+    background-color: blueviolet;
+}
+
+.forms .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
